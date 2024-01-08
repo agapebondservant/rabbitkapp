@@ -2,6 +2,7 @@ apiVersion: sql.tanzu.vmware.com/v1
 kind: Postgres
 metadata:
   name: pg1
+  namespace: postgreskapp
 spec:
   storageClassName: generic
   monitorStorageClassName: generic

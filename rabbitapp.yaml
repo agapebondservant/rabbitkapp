@@ -1,0 +1,16 @@
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: rabbit-app
+spec:
+  serviceAccountName: default
+  fetch:
+    - git:
+        url: https://github.com/agapebondservant/rabbitkapp.git
+        ref: origin/main
+
+  template:
+    - ytt: {}
+
+  deploy:
+    - kapp: {}
